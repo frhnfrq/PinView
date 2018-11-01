@@ -4,8 +4,8 @@
 
 A `PinView` library for Android. To enter pin/otp.
 
-
-
+<img src="screenshots/1.png" width="270px" height="480px" />
+<img src="screenshots/2.png" width="270px" height="480px" />
 
 ## Setup
 
