@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#FFFFFF" />
-    <corners android:radius="4dp" />
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background_pin_normal" android:state_focused="false" />
+    <item android:drawable="@drawable/background_pin_focused" android:state_focused="true" />
+    <item android:drawable="@drawable/background_pin_normal" />
+</selector>
