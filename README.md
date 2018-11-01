@@ -49,7 +49,7 @@ dependencies {
 ```java
 PinView pinview = findViewById(R.id.pinview);
 String pin = pinview.getPin();
-if (pin != null) {
+if (pin == null) {
     // all fields are not filled
 } else {
     // your code
