@@ -72,6 +72,48 @@ pinview.setPin("123456"); // the length must match pin count
 * **pBackground** : Background drawable for pin field.
 * **pBackgroundFilled** : Background drawable for pin field when it's filled.
 
+## Custom Background Drawable examples
+
+### pBackground
+* **background_pin.xml**
+```xml
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background_pin_normal" android:state_focused="false" />
+    <item android:drawable="@drawable/background_pin_focused" android:state_focused="true" />
+    <item android:drawable="@drawable/background_pin_normal" />
+</selector>
+```
+
+* **background_pin_normal.xml**
+```xml
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" />
+    <corners android:radius="4dp" />
+    <stroke
+        android:width="1dp"
+        android:color="#CFCFCF" />
+</shape>
+```
+
+* **background_pin_focused.xml**
+```xml
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" />
+    <corners android:radius="4dp" />
+    <stroke
+        android:width="1dp"
+        android:color="#ce4242" />
+</shape>
+```
+### pBackgroundFilled
+
+* **background_pin_filled.xml**
+```xml
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ce4242" />
+    <corners android:radius="4dp" />
+</shape>
+```
 
 
 License
