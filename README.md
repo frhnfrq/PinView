@@ -42,7 +42,8 @@ dependencies {
         app:pGap="5dp"
         app:pTextColorSelected="#000000"
         app:pTextColor="#FFFFFF"
-        app:pTextSize="16sp"/>
+        app:pTextSize="16sp"
+        app:pFont="montserrat.otf"/>
 ```
 
 #### Get an instance of it in your code
