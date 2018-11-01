@@ -57,8 +57,8 @@ public class PinView extends LinearLayout {
             mPinTextSize = a.getDimensionPixelSize(R.styleable.PinView_pTextSize, 16);
             mPinTextColor = a.getColor(R.styleable.PinView_pTextColor, Color.WHITE);
             mPinTextColorSelected = a.getColor(R.styleable.PinView_pTextColorSelected, Color.BLACK);
-            mPinBackground = a.getResourceId(R.styleable.PinView_pBackground, R.drawable.background);
-            mPinBackgroundFilled = a.getResourceId(R.styleable.PinView_pBackgroundFilled, R.drawable.background_filled);
+            mPinBackground = a.getResourceId(R.styleable.PinView_pBackground, R.drawable.background_pin);
+            mPinBackgroundFilled = a.getResourceId(R.styleable.PinView_pBackgroundFilled, R.drawable.background_pin_filled);
 
             try {
                 if (fontName != null) {
