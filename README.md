@@ -4,8 +4,10 @@
 
 A `PinView` library for Android. To enter pin/otp. After typing a number, focus automatically changes to next field. It supports backspace, focus can be changed to previous field by pressing backspace. Can be customized with custom fonts and background drawables.
 
+<p float="left">
 <img src="screenshots/1.png" width="270px" height="480px" />
 <img src="screenshots/2.png" width="270px" height="480px" />
+</p>
 
 ## Setup
 
