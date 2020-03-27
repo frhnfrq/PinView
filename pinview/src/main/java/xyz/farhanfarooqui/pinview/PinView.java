@@ -97,7 +97,7 @@ public class PinView extends LinearLayout {
                 mPinHeight = mPinSize;
             }
 
-            LayoutParams params = new LayoutParams(mPinSize, mPinSize);
+            LayoutParams params = new LayoutParams(mPinWidth, mPinHeight);
 
             if (i != 0)
                 params.setMargins(mPinGap, 0, 0, 0);
