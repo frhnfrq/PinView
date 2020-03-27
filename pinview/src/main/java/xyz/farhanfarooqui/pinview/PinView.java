@@ -26,7 +26,7 @@ import android.widget.LinearLayout;
 public class PinView extends LinearLayout {
 
     private int mPinCount;
-    private int mPinSize, mPinTextSize, mPinGap;
+    private int mPinSize, mPinWidth, mPinHeight, mPinTextSize, mPinGap;
     private int mPinTextColor, mPinTextColorSelected;
     private int mPinBackground, mPinBackgroundFilled;
     private Typeface mPinTypeface;
@@ -54,6 +54,8 @@ public class PinView extends LinearLayout {
             String fontName = a.getString(R.styleable.PinView_pFont);
             mPinCount = a.getInt(R.styleable.PinView_pCount, 6);
             mPinSize = a.getDimensionPixelSize(R.styleable.PinView_pSize, 100);
+            mPinWidth = a.getDimensionPixelSize(R.styleable.PinView_pWidth, -1);
+            mPinHeight = a.getDimensionPixelSize(R.styleable.PinView_pHeight, -1);
             mPinGap = a.getDimensionPixelSize(R.styleable.PinView_pGap, 30);
             mPinTextSize = a.getDimensionPixelSize(R.styleable.PinView_pTextSize, 16);
             mPinTextColor = a.getColor(R.styleable.PinView_pTextColor, Color.WHITE);
@@ -89,6 +91,12 @@ public class PinView extends LinearLayout {
             pinEditText.setBackground(getDrawable(mPinBackground));
             pinEditText.setCursorVisible(false);
             pinEditText.setPadding(0, 0, 0, 0);
+
+            if(mPinWidth == -1 || mPinHeight == -1) {
+                mPinWidth = mPinSize;
+                mPinHeight = mPinSize;
+            }
+
             LayoutParams params = new LayoutParams(mPinSize, mPinSize);
 
             if (i != 0)

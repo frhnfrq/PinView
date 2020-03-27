@@ -3,6 +3,8 @@
     <declare-styleable name="PinView">
         <attr name="pCount" format="integer" />
         <attr name="pSize" format="dimension" />
+        <attr name="pWidth" format="dimension" />
+        <attr name="pHeight" format="dimension" />
         <attr name="pGap" format="dimension" />
         <attr name="pTextSize" format="dimension" />
         <attr name="pTextColor" format="color" />
