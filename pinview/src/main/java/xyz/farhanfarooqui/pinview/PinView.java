@@ -33,6 +33,7 @@ public class PinView extends LinearLayout {
     private InputMethodManager mKeyboardManager;
 
     private int currentPin;
+    private OnPinCompletedListener mPinCompletedListener;
 
 
     public PinView(Context context) {
@@ -113,6 +114,10 @@ public class PinView extends LinearLayout {
 
     private PinEditText previousPin() {
         return findViewById(currentPin - 1);
+    }
+
+    public void setPinCompletedListener(OnPinCompletedListener listener) {
+        mPinCompletedListener = listener;
     }
 
     /**
@@ -226,6 +231,11 @@ public class PinView extends LinearLayout {
                         clearAllFocus();
                         mKeyboardManager.hideSoftInputFromWindow(getWindowToken(), 0);
                     }
+
+                    String pin = getPin();
+                    if (pin != null && pin.length() == mPinCount) {
+                        mPinCompletedListener.onPinCompleted(pin);
+                    }
                 }
             }
         }
@@ -277,5 +287,9 @@ public class PinView extends LinearLayout {
                 return super.deleteSurroundingText(beforeLength, afterLength);
             }
         }
+    }
+
+    public interface OnPinCompletedListener {
+        public void onPinCompleted(String pin);
     }
 }
